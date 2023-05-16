@@ -6,14 +6,14 @@ public class EnumElvisSerialization {
 
     public static void main(String[] args) {
         try (ObjectOutput out = new ObjectOutputStream(new FileOutputStream("elvis.obj"))) {
-            out.writeObject(EnumElvis.INSTANCE);
+            out.writeObject(Elvis.getInstance());
         } catch (IOException e) {
             e.printStackTrace();
         }
 
         try (ObjectInput in = new ObjectInputStream(new FileInputStream("elvis.obj"))) {
-            EnumElvis elvis = (EnumElvis) in.readObject();
-            System.out.println(elvis == EnumElvis.INSTANCE); // true
+            Elvis elvis = (Elvis) in.readObject();
+            System.out.println(elvis == Elvis.getInstance()); // true
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }

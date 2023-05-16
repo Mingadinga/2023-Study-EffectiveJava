@@ -1,16 +1,24 @@
 package org.example.item3;
 
-public class Elvis implements Singer {
+import java.io.Serial;
+import java.io.Serializable;
+
+public class Elvis implements Singer, Serializable {
 
     private static final Elvis INSTANCE = new Elvis();
     private static boolean created;
-    public static Elvis getInstance() { return new Elvis(); }
+    public static Elvis getInstance() { return INSTANCE; }
+
+    @Serial
+    private Object readResolve() {
+        return getInstance();
+    }
 
     private Elvis() {
-        if (created) {
-            throw new UnsupportedOperationException("can't be created by constructor.");
-        }
-        created = true;
+//        if (created) {
+//            throw new UnsupportedOperationException("can't be created by constructor.");
+//        }
+//        created = true;
     }
 
     @Override
