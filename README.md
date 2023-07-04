@@ -1,5 +1,6 @@
 # 2023-Study-EffectiveJava
-
+GDSC Sookmyung의 고급 자바 스터디입니다.
+[원본 레포지토리](https://github.com/dsc-sookmyung/2023-01-Effective-Java-Study)에 공부하고 토론한 내용이 이슈로 정리되어있습니다.
 
 # 공부 기록
 
@@ -12,3 +13,4 @@
 | 2023-05-23 | Item10. equals는 일반 규약을 지켜 재정의하라          |
 | 2023-05-29 | Item18. 상속보다는 컴포지션을 사용하라                 |
 | 2023-06-26 | Item23. 태그 달린 클래스보다는 클래스 계층 구조를 활용하라<br>Item24. 멤버 클래스는 되도록 static으로 만들라 |
+| 2023-07-04 | Item27. 비검사 경고를 제거하라 |
